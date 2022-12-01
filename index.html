@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos e cia</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Crie e compartilhe<br>seu evento.</h1>
+            
+            <p>O primeiro passo, é preencher esse <br>
+                formulário de inscrição.</p>
+        </header>
+            
+            
+            
+            <form id="my-form"> <!-- Aqui vem os inputs e a estrutura do from-->
+                <fieldset> <!-- Conjunto de Campo-->
+                    <legend>Imformações do Evento</legend>
+                    
+                    <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                        <label for="event-title">Título do evento <span>(mínimo 8 caracteres)</span></label>
+                        <input minlength="8" type="text" id="event-title" minlength="8" required placeholder="#"/>
+                    </div>
+
+                    <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                        <label for="event-link">Link do evento <span>(comece com https://)</span></label>
+                        <input type="url" id="event-link" required placeholder="#"/>
+                    </div>
+                    
+                    <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                        <label for="event-whatsApp">Whatsapp para contato <span>(somente números)</span></label>
+                        <input type="number" id="event-whatsApp" minlength="8" required placeholder="#"/>
+                    </div>
+
+                    <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                        <label for="event-title">Informações  extras</label>
+                        <textarea id="event-info"></textarea>
+                    </div>
+
+                    <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                        <label for="event-category">Categoria</label>
+                        <select id="event-category" required>
+                            <option value="live">Ao Vivo</option>
+                            <option value="podcast">PodCast</option>
+                            <option value="mentoring">Mentoria</option>
+                            <option value="youtube">Conteúdo gravado</option>
+
+                        </select>
+                    </div>
+                    
+                </fieldset>
+
+                <fieldset> <!-- Conjunto de Campo-->
+                    <legend>Privacidade</legend>
+
+                    <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                        <label for="event-email">E-mail do administrador<span>(digite um email válido)</span></label>
+                        <input type="email" id="event-email" required placeholder="#"/>
+                    </div>
+
+                    <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                        <label for="event-password">Senha de acesso para os participantes<span>(mínimo 8 caracteres)</span></label>
+                        <input type="password" id="event-password" required placeholder="#" minlength="8"/>
+                    </div>
+
+                    <div class="checkbox-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                        <input type="checkbox" id="event-checkbox"/>
+                        <label for="event-password">Evento privado</label>
+                    </div>
+                    
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dia e Hora</legend>
+
+                    <div class="col-3">
+                        <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                            <label for="event-email">data</span></label>
+                            <input type="date" id="event-date"/>
+                        </div>
+
+                        <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                            <label for="event-datetime">Das</span></label>
+                            <input type="time" id="event-datetime" />
+                        </div>
+
+                        <div class="input-wrapper"> <!-- WRAPPER => significa que está colocando tudo em uma caixa.-->
+                            <label for="event-end">Até</span></label>
+                            <input type="time" id="event-end"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+                <footer>
+                    <input type="submit" form="my-form" value="Salvar evento">
+                </footer>
+        </div>
+</body>
+</html>
